@@ -1,4 +1,8 @@
-*.class
+appengine
+.vagrant
+config.php
+.idea
+.DS_Store
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
