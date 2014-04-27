@@ -97,11 +97,11 @@ function get_beach_status($beach = null, $lat = null, $long = null) {
 
 	switch ($status) {
 		case "Safe":
-			$icon = "http://app.toronto.ca/tpha/images/beaches_safe_large.gif";
+			$icon = "https://raw.githubusercontent.com/michaelsanford/Glass-Beach/master/mirror-api-php/assets/safe-icon.png";
 			break;
 
 		case "Unsafe":
-			$icon = "http://app.toronto.ca/tpha/images/beaches_unsafe_large.gif";
+			$icon = "https://raw.githubusercontent.com/michaelsanford/Glass-Beach/master/mirror-api-php/assets/unsafe-icon.png";
 			break;
 
 		default:
@@ -129,6 +129,10 @@ function get_xml($path) {
 	curl_close($ch);
 
 	return new SimpleXMLElement($sXML);
+
+}
+
+if (isset($_POST['lat']) && isset($_POST['long'])) {
 
 }
 
