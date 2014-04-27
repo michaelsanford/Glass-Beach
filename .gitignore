@@ -3,7 +3,7 @@ appengine
 config.php
 .idea
 .DS_Store
-
+.apk
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
