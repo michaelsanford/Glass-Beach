@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Glass Beach by michaelsanford</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Glass Beach</h1>
+        <h2>Glassware for Toronto Glass Hackathon V2: Beach Water Quality</h2>
+        <a href="https://github.com/michaelsanford/Glass-Beach" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="glass-beach" class="anchor" href="#glass-beach"><span class="octicon octicon-link"></span></a>Glass-Beach</h1>
+
+<p>Glassware for Toronto Glass Hackathon V2: Beach Water Quality</p>
+
+<h2>
+<a name="intro" class="anchor" href="#intro"><span class="octicon octicon-link"></span></a>Intro</h2>
+
+<p>Results from daily water samples taken at Toronto's beaches is made available as part of the City's <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=80bd0ea14b661310VgnVCM1000003dd60f89RCRD&amp;vgnextchannel=8517e03bb8d1e310VgnVCM10000071d60f89RCRD">Open Data Initiative and Open311</a>.
+ Our team decided to take this information, correlate it with positonal data from GPS, and create
+ a data-driven, location-based piece of Glassware that reports swimming conditions in a user-friendly way
+ to a user standing at one of Toronto's 11 beaches.</p>
+
+<h2>
+<a name="mirror-api-backend" class="anchor" href="#mirror-api-backend"><span class="octicon octicon-link"></span></a>Mirror API (backend)</h2>
+
+<h3>
+<a name="design" class="anchor" href="#design"><span class="octicon octicon-link"></span></a>Design</h3>
+
+<p>The Mirror API was scaffolded from the <a href="https://github.com/googleglass/mirror-quickstart-php">mirror-api-php</a> sample application (at 6ebe5a) and modified to suit our needs.</p>
+
+<p>Upon receiving a request from the Google API listener, containing either: </p>
+
+<ol>
+<li>the numeric id of a beach (from a menu); or </li>
+<li>geographic coordinates (from GPS)</li>
+</ol><p>the Glass-Beach Mirror API contacts Toronto's Open Data source for beach water quality and extracts its status {<code>Safe</code>/<code>Unsafe</code>} and any advisory messages.</p>
+
+<h3>
+<a name="installing" class="anchor" href="#installing"><span class="octicon octicon-link"></span></a>Installing</h3>
+
+<div class="highlight highlight-bash"><pre>git-clone --recursive git@github.com:michaelsanford/Glass-Beach.git <span class="se">\</span>
+ <span class="o">&amp;&amp;</span> <span class="nb">cd  </span>Glass-Beach/mirror-api-php  <span class="se">\</span>
+ <span class="o">&amp;&amp;</span> vagrant up
+</pre></div>
+
+<p>Then, log in to the <a href="https://code.google.com/apis/console/">Google API Console</a> create an OAuth 2 key and ensure that you have checked off "Mirror API" in the Services tab. Add appropriate values to <code>config.php</code>.</p>
+
+<h2>
+<a name="glassware-frontend" class="anchor" href="#glassware-frontend"><span class="octicon octicon-link"></span></a>Glassware (frontend)</h2>
+
+<h3>
+<a name="invocation" class="anchor" href="#invocation"><span class="octicon octicon-link"></span></a>Invocation</h3>
+
+<p><code>"Ok, Glass: How's the water?"</code></p>
+
+<h3>
+<a name="building" class="anchor" href="#building"><span class="octicon octicon-link"></span></a>Building</h3>
+
+<p>Import the project from <code>Glass-Beach/Glassware</code> into Android Studio, making sure you've installed <em>Android 4.2.2 (API 19)</em> and the <em>Glass Development Kit Preview</em> from the SDK Manager.</p>
+
+<p>Cross your fingers.</p>
+
+<p>Build.</p>
+
+<h3>
+<a name="design-1" class="anchor" href="#design-1"><span class="octicon octicon-link"></span></a>Design</h3>
+
+<p>The application was scaffolded from the <a href="https://github.com/googleglass/gdk-apidemo-sample">gdk-apidemo-sample</a> (at db3cc0) and modified by <a href="">Steven</a> and <a href="">Skyler</a>.</p>
+
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>Feel free to fork (and send pull requests)! Bugs and new features are listed in the <a href="https://github.com/michaelsanford/Glass-Beach/issues">Issue Tracker</a>. If you'd like to add something, feel free.</p>
+
+<h2>
+<a name="colophon" class="anchor" href="#colophon"><span class="octicon octicon-link"></span></a>Colophon</h2>
+
+<p>Steven Zarichney | Slyker Fitchett | Michael Sanford</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/michaelsanford/Glass-Beach/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/michaelsanford/Glass-Beach/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/michaelsanford/Glass-Beach"></a> is maintained by <a href="https://github.com/michaelsanford">michaelsanford</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
