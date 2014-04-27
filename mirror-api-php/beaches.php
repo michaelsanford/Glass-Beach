@@ -134,6 +134,8 @@ function get_xml($path) {
 
 if (isset($_POST['lat']) && isset($_POST['long'])) {
 
+
+
 }
 
 //$ret = get_beach_status(1);

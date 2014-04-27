@@ -152,7 +152,7 @@ switch ($_POST['operation']) {
 			$html = $status[0] . ": " . $status[1];
 		} else {
 			$html = "This is not the beach you are looking for...";
-			$status[2] = "https://raw.githubusercontent.com/michaelsanford/Glass-Beach/master/mirror-api-php/assets/nobeach-icon.png";
+			$status[2] = "https://raw.githubusercontent.com/michaelsanford/Glass-Beach/master/mirror-api-php/assets/nobeach-icon.jpg";
 		}
 
 		$new_timeline_item->setText($html);
